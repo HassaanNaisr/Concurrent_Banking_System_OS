@@ -67,3 +67,13 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+# Compiled binary
+banking_system
+
+# Log output files
+logs/*.log
+logs/*.txt
+
+# IDE folders
+.vscode/
+.idea/

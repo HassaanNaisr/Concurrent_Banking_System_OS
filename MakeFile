@@ -1,0 +1,20 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -pthread
+TARGET = banking_system
+SRCDIR = src
+
+SRCS = $(SRCDIR)/main.cpp \
+       $(SRCDIR)/Bank.cpp \
+       $(SRCDIR)/Logger.cpp \
+       $(SRCDIR)/TransactionWorker.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+
+clean:
+	rm -f $(TARGET)
+
+run: all
+	./$(TARGET)
